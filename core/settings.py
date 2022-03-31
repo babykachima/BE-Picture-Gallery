@@ -29,7 +29,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home'  # Enable the inner home (home)
+    'rest_framework',
+    'api',
+    'authentication',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +122,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
+
+AUTH_USER_MODEL = 'authentication.User'
 
 
 #############################################################
